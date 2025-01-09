@@ -1,0 +1,68 @@
+.overview_container{
+    .overview_top_section_container{
+        .overview_top_section_left_container,.overview_top_section_right_container{
+            width: 50%;
+        }
+        .overview_top_overlay_container{
+            background-color: #1F1F1F;
+            width: 90%;
+            margin: auto;
+            border: 1px solid #2C2C2C;
+            height: 225px;
+            border-radius: 6px;
+            padding: 24px;
+        }
+        .header_row{
+            .header_row_left,.header_row_rightr{
+                width: 50%;
+            }
+            .header_title{
+                font-size: 14px;
+                color: #9C9C9C;
+            }
+            .header_content{
+                font-size: px;
+            }
+        }
+        .header_overlay_title{
+            font-size: 12px;
+        }
+        .vehicle_swiper_container{
+            max-height: 180px;
+            .swiper-container{
+                height: 160px;
+            }
+        }
+    }
+    .overview_recent_events_container{
+        margin-top: 40px;
+        padding: 24px;
+        .recent_events_header_title,.recent_events_header_action{
+            font-size: 12px;
+            width: 50%;
+        }
+        .recent_events_header_action{
+            text-align: right;
+        }
+        .recent_events_details_table_container{
+            .recent_event_detail_row{
+                border-bottom: 1px solid #353535;
+                padding: 16px 0px;
+                .recent_event_detail_icon{
+                    width: 5%;
+                    margin-top: 5px;
+                }
+                .recent_event_detail_description{
+                    width: 95%;
+                    .recent_event_detail_title{
+                        font-size: 14px;
+                    }
+                    .recent_event_detail_time{
+                        font-size: 12px ;
+                        color: #9C9C9C;
+                    }
+                }
+            }
+        }
+    }
+}
