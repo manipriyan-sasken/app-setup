@@ -1,0 +1,120 @@
+:root {
+  --background-color: #1b1b1b;
+  --text-color: #ffffff;
+  --navbar-bg: #242323;
+  --ttip-color-bg: #2e3134;
+  --ttip-color-text: #ffffff;
+  --sub-nav-menu-bg: #2e2e2e;
+  --badges-bg: #49494980;
+  --scroll-color: #ffffff;
+  --font-family-1: Poppins;
+}
+
+[data-theme="dark"] {
+  --background-color: #1b1b1b;
+  --text-color: #ffffff;
+  --navbar-bg: #242323;
+  --ttip-color-bg: #ffffff;
+  --ttip-color-text: #2e3134;
+  --sub-nav-menu-bg: #2e2e2e;
+  --badges-bg: #49494980;
+  --scroll-color: #ffffff;
+}
+
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #1b1b1b;
+  --navbar-bg: #242323;
+  --ttip-color-bg: #2e3134;
+  --ttip-color-text: #ffffff;
+  --sub-nav-menu-bg: #2e2e2e;
+  --badges-bg: #49494980;
+  --scroll-color: #6f6f6f;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.nav-tap {
+  background-color: var(--navbar-bg);
+}
+
+.default-scroll-5::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+
+.nav-ul li {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* .scroll-nav {
+  background-color: var(--navbar-bg);
+  border-radius: 6px 6px 0 0;
+} */
+
+.scroll-nav::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: var(--scroll-color);
+}
+
+.profile-icon {
+  border-radius: 50%;
+  border: 1.5px solid #848484;
+}
+
+.profile-icon:hover {
+  border-radius: 50%;
+}
+
+.profile-icon p {
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-family-1);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.profile-status {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0.25rem;
+  border: 1px solid white;
+}
+
+h1 {
+  display: inline-block;
+}
+
+.custom-ttip {
+  background-color: var(--ttip-color-bg);
+  color: var(--ttip-color-text);
+}
+
+.submenu-outer {
+  background-color: var(--sub-nav-menu-bg);
+  height: calc(100vh - 5rem);
+  padding: 1rem;
+  width: max-content;
+}
+
+.search-box {
+  background-color: #1f1f1f;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.search-box input {
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
