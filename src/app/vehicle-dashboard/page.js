@@ -5,6 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import VehicleDashboard from "@/components/views/VehicleDashboard";
 import Image from "next/image";
 import Sidebar from "@/components/shared/Sidebar";
+import Line_Graph from "@/components/shared/Line-Graph";
 
 export default function Home() {
   let path = usePathname();
@@ -45,7 +46,12 @@ export default function Home() {
       document.querySelector("body").setAttribute("data-theme", "dark");
     }
   };
-
+  const data1=[10, 15, 30, 25, 20,25,55,45,64,53,78,32];
+  const data2=[20, 25, 40, 35, 30, 45,32,76,34,62,86,12];
+  const data3=[5, 45, 10, 85, 20, 95,5,9,30,90,20,45,55];
+  const label1="D0";
+  const label2="D1";
+  const label3="D2";
   return (
     <div>
       <button
@@ -55,6 +61,10 @@ export default function Home() {
       >
         Toggle Theme
       </button>
+      <div style={{width:"800px"}}>
+      {/* <Line_Graph data1={data1} data2={data2} data3={data3} label1={label1} label2={label2} label3={label3}  /> */}
+      </div>
+      
       <VehicleDashboard
         setShowSideBar={setShowSideBar}
         showSideBar={showSideBar}

@@ -8,6 +8,7 @@
   --badges-bg: #49494980;
   --scroll-color: #ffffff;
   --font-family-1: Poppins;
+  --graph-bgcolor:#6f6f6f;
 }
 
 [data-theme="dark"] {
@@ -19,6 +20,7 @@
   --sub-nav-menu-bg: #2e2e2e;
   --badges-bg: #49494980;
   --scroll-color: #ffffff;
+  --graph-bgcolor:#2c2a2a;
 }
 
 [data-theme="light"] {
@@ -30,6 +32,7 @@
   --sub-nav-menu-bg: #2e2e2e;
   --badges-bg: #49494980;
   --scroll-color: #6f6f6f;
+  --graph-bgcolor:#dcdcdc;
 }
 
 body {
@@ -61,7 +64,41 @@ body {
   height: 3px;
   background-color: var(--scroll-color);
 }
-
+.graph-table{
+  border: 0px solid var(--text-color);
+  padding: 1rem;
+  background-color: var(--graph-bgcolor);
+  border-radius: 7px;
+}
+.graph-table-title{
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom:1rem ;
+}
+.graph-table-label{
+  height: 8px;
+  width: 25px;
+  border-radius: 2px;
+}
+.d-flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.gap-20{
+  gap: 20px;
+}
+.gap-10{
+  gap: 10px;
+}
+.text-color{
+  color: var(--text-color);
+}
+.align-items-center{
+  align-items: center;
+}
 .profile-icon {
   border-radius: 50%;
   border: 1.5px solid #848484;
