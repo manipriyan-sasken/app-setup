@@ -9,7 +9,6 @@ import Sidebar from "@/components/shared/Sidebar";
 export default function Home() {
   let path = usePathname();
   let router = useRouter();
-
   const [showSideBar, setShowSideBar] = useState(false);
   const [theme, setTheme] = useState("light");
 
@@ -38,14 +37,23 @@ export default function Home() {
     }
   }, [path]);
 
+  const changeTheme = () => {
+    if (document.querySelector("body").getAttribute("data-theme") === "dark") {
+      document.querySelector("body").setAttribute("data-theme", "light");
+    } else {
+      document.querySelector("body").setAttribute("data-theme", "dark");
+    }
+  };
+
   return (
     <div>
-      {/* <button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="p-2 bg-gray-300 rounded"
+      <button
+        // onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={changeTheme}
+        className="p-2 bg-gray-300 rounded absolute"
       >
         Toggle Theme
-      </button> */}
+      </button>
       <VehicleDashboard
         setShowSideBar={setShowSideBar}
         showSideBar={showSideBar}

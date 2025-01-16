@@ -1,0 +1,139 @@
+// Variables
+$background-color-dark: #1b1b1b;
+$text-color-dark: #ffffff;
+$navbar-bg: #242323;
+$ttip-bg-dark: #2e3134;
+$ttip-text-dark: #ffffff;
+$sub-nav-menu-bg: #2e2e2e;
+$badges-bg: #49494980;
+$scroll-color-dark: #ffffff;
+$font-family-1: "Poppins";
+
+$background-color-light: #ffffff;
+$text-color-light: #1b1b1b;
+$ttip-bg-light: #ffffff;
+$ttip-text-light: #2e3134;
+$scroll-color-light: #6f6f6f;
+
+// Theme Variables
+:root {
+  --background-color: #{$background-color-dark};
+  --text-color: #{$text-color-dark};
+  --navbar-bg: #{$navbar-bg};
+  --ttip-color-bg: #{$ttip-bg-dark};
+  --ttip-color-text: #{$ttip-text-dark};
+  --sub-nav-menu-bg: #{$sub-nav-menu-bg};
+  --badges-bg: #{$badges-bg};
+  --scroll-color: #{$scroll-color-dark};
+  --font-family-1: #{$font-family-1};
+}
+
+[data-theme="dark"] {
+  --background-color: #{$background-color-dark};
+  --text-color: #{$text-color-dark};
+  --navbar-bg: #{$navbar-bg};
+  --ttip-color-bg: #{$ttip-bg-light};
+  --ttip-color-text: #{$ttip-text-light};
+  --sub-nav-menu-bg: #{$sub-nav-menu-bg};
+  --badges-bg: #{$badges-bg};
+  --scroll-color: #{$scroll-color-dark};
+}
+
+[data-theme="light"] {
+  --background-color: #{$background-color-light};
+  --text-color: #{$text-color-light};
+  --navbar-bg: #{$navbar-bg};
+  --ttip-color-bg: #{$ttip-bg-dark};
+  --ttip-color-text: #{$ttip-text-dark};
+  --sub-nav-menu-bg: #{$sub-nav-menu-bg};
+  --badges-bg: #{$badges-bg};
+  --scroll-color: #{$scroll-color-light};
+}
+
+// Global Styles
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.nav-tap {
+  background-color: var(--navbar-bg);
+}
+
+.default-scroll-5 {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 3px;
+  }
+}
+
+.nav-ul {
+  li {
+    margin: 0 5px;
+  }
+}
+
+.scroll-nav {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: var(--scroll-color);
+  }
+}
+
+.profile-icon {
+  border-radius: 50%;
+  border: 1.5px solid #848484;
+
+  &:hover {
+    border-radius: 50%;
+  }
+
+  p {
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-family-1);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+
+.profile-status {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0.25rem;
+  border: 1px solid white;
+}
+
+h1 {
+  display: inline-block;
+}
+
+.custom-ttip {
+  background-color: var(--ttip-color-bg);
+  color: var(--ttip-color-text);
+}
+
+.submenu-outer {
+  background-color: var(--sub-nav-menu-bg);
+  height: calc(100vh - 5rem);
+  padding: 1rem;
+  width: max-content;
+}
+
+.search-box {
+  background-color: #1f1f1f;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 8px;
+
+  input {
+    height: 100%;
+    background-color: inherit;
+    border: none;
+    outline: none;
+  }
+}
