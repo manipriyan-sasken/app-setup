@@ -1,6 +1,6 @@
 import React ,{useState}from 'react'
-import Line_table from './Line-table';
-import Line_Graph from './Line-Graph';
+import Line_table from './Linetable';
+import Line_Graph from './LineGraph';
 
 const Line_Common = () => {
     const [selectedOpt,setSelectedOpt]=useState("graphs");
