@@ -10,26 +10,26 @@ const Line_Graph = (props) => {
       {
         label:props.label1,
         data: props.data1,
-        fill: false,
-        borderColor: "rgba(75,192,192,1)",
-        backgroundColor: "rgba(75,192,192,0.2)",
-        tension: 0, 
+        borderColor: "rgba(249, 75, 101, 1)",
+        pointRadius: 0, // Removes circle markers
+      pointHoverRadius: 0, // Disables hover effect on points
+      borderWidth: 2,
       },
       {
         label: props.label2,
         data: props.data2,
-        fill: false,
-        borderColor: "rgb(192, 145, 75)",
-        backgroundColor: "rgba(113, 43, 0, 0.2)",
-        tension: 0, 
+        borderColor: "rgba(205, 133, 63, 1)",
+        pointRadius: 0, // Removes circle markers
+        pointHoverRadius: 0, // Disables hover effect on points
+        borderWidth: 2,
       },
       {
         label: props.label3,
         data: props.data3,
-        fill: false,
-        borderColor: "rgb(7, 37, 234)",
-        backgroundColor: "rgba(113, 43, 0, 0.2)",
-        tension: 0, 
+        borderColor: "rgba(111, 111, 112, 1)",
+        pointRadius: 0, // Removes circle markers
+        pointHoverRadius: 0, // Disables hover effect on points
+        borderWidth: 2,
       },
     ],
   };
@@ -62,20 +62,25 @@ const Line_Graph = (props) => {
         <div># DTC TRACKER</div>
         <div className='d-flex gap-20 align-items-center'>
           <div className='d-flex gap-10'>
-          <div className='d-flex align-items-center gap-10'><hr className='graph-table-label' style={{backgroundColor:"rgba(75,192,192,1)"}}></hr><span>{props.label1}</span></div>
-          <div className='d-flex align-items-center gap-10'><hr className='graph-table-label' style={{backgroundColor:"rgba(192, 145, 75)"}}></hr><span>{props.label2}</span></div>
-          <div className='d-flex align-items-center gap-10'><hr className='graph-table-label' style={{backgroundColor:"rgba(7, 37, 234)"}}></hr><span>{props.label3}</span></div>
+          <div className='d-flex align-items-center gap-10'><hr className='graph-table-label' style={{backgroundColor:"rgba(249, 75, 101, 1)"}}></hr><span>{props.label1}</span></div>
+          <div className='d-flex align-items-center gap-10'><hr className='graph-table-label' style={{backgroundColor:"rgba(205, 133, 63, 1)"}}></hr><span>{props.label2}</span></div>
+          <div className='d-flex align-items-center gap-10'><hr className='graph-table-label' style={{backgroundColor:"rgba(111, 111, 112, 1)"}}></hr><span>{props.label3}</span></div>
           </div>
           <div>
-            <select className='text-color' style={{width:"70px",}}>
-              <option className='text-color'>2023</option>
-              <option className='text-color'>2024</option>
-              <option className='text-color'>2025</option>
-            </select>
+          <select
+              style={{ width: "12rem", backgroundColor: "black", padding: "0.5rem", color: "red" }}
+              value={props.selectedOpt} 
+              onChange={(e) => props.handleSelectChange(e.target.value)} 
+          >
+            <option value="graphs">View by Records</option>
+            <option value="record">View By Charts</option>
+          </select>
+
+            
           </div>
         </div>
       </div>
-       <Line data={data} options={options}/>
+       <Line data={data} options={options} style={{height:"5rem"}}/>
     </div>
   )
 }
